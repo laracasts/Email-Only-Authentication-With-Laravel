@@ -66,6 +66,8 @@ class AuthController extends Controller
      */
     public function logout()
     {
+        // Or put this on AuthenticatesUser, and
+        // do $this->auth->logout();
         auth()->logout();
 
         return redirect('/');
