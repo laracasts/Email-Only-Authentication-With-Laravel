@@ -74,8 +74,3 @@ class AuthenticatesUser
         return LoginToken::generateFor($user);
     }
 }
-
-
-
-
-
