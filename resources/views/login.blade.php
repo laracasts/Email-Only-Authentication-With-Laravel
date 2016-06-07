@@ -21,6 +21,16 @@
 
         {{ csrf_field() }}
 
+        @if ($errors->count())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <label for="inputEmail" class="sr-only">Email Address</label>
 
         <input name="email"
